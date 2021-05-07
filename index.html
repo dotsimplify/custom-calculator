@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom Calculator</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.1.2/tailwind.min.css"
+      integrity="sha512-RntatPOhEcQEA81gC/esYoCkGkL7AYV7TeTPoU+R9zE44/yWxVvLIBfBSaMu78rhoDd73ZeRHXRJN5+aPEK53Q=="
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="min-h-screen flex bg-indigo-50">
+      <div class="m-auto p-8 rounded-lg bg-gray-300 my-4">
+        <div class="text-xl my-4 font-semibold text-indigo-800">
+          Custom Calculator
+        </div>
+        <form class="" action="" id="form">
+          <div>
+            <select
+              id="size"
+              class="w-96 bg-blue-100 focus:border-none focus:visible outline-none my-2 border-2 border-gray-200"
+            >
+              <option selected value="">Please Select Value</option>
+              <option value="10">S</option>
+              <option value="20">M</option>
+              <option value="30">L</option>
+            </select>
+            <div class="text-red-600" id="size-error">Value can't be empty</div>
+          </div>
+          <div>
+            <select
+              class="w-96 bg-blue-100 focus:border-none focus:visible outline-none my-2 border-2 border-gray-200"
+              id="question"
+            >
+              <option selected value="">Please Select Value</option>
+
+              <option value="0">Yes</option>
+              <option value="10">No</option>
+            </select>
+            <div class="text-red-600" id="question-error">
+              Value can't be empty
+            </div>
+          </div>
+          <div>
+            <select
+              class="w-96 bg-blue-100 focus:border-none focus:visible outline-none my-2 border-2 border-gray-200"
+              id="type"
+            >
+              <option selected value="">Please Select Value</option>
+
+              <option value="10">Primary</option>
+              <option value="20">Third Party</option>
+            </select>
+            <div id="type-error" class="text-red-600">Value can't be empty</div>
+          </div>
+          <div>
+            <select
+              class="w-96 bg-blue-100 focus:border-none focus:visible outline-none my-2 border-2 border-gray-200"
+              id="delivery"
+            >
+              <option selected value="">Please Select Value</option>
+              <option value="100">1 Day</option>
+              <option value="50">1 Week</option>
+              <option value="10">1 Month</option>
+            </select>
+            <div id="delivery-error" class="text-red-600">
+              Value can't be empty
+            </div>
+          </div>
+          <div class="text-center py-2">
+            <button
+              id="submit"
+              class="p-2 focus:outline-none border-2 border-blue-500 bg-blue-500 text-white hover:text-black hover:bg-white rounded-lg"
+              type="submit"
+            >
+              Show Score
+            </button>
+          </div>
+          <div id="show-score" class="text-center">
+            Your Score is
+            <span class="text-red-400 font-semibold" id="score"></span>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
